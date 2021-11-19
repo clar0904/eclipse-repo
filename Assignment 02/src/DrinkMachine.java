@@ -91,8 +91,6 @@ public class DrinkMachine {
 			difference = Math.abs(volume-MEDIUM_VOLUME);
 		} else if (size.equals(LARGE)) {
 			difference = Math.abs(volume-LARGE_VOLUME);
-		} else {
-			return "Invalid drink size!";
 		}
 
 		if (difference > EPSILON) {
