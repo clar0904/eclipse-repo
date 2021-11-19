@@ -21,7 +21,7 @@ public class Assignment02 {
 		do {
 			while (!sizeSet) {
 				sizeSet = machine.setSize(user.inputString(String.format("%n%s%n%s%n%n%s", machine.drinkSizeMenu(), 
-						"NOTE: drink sizes are", "Enter drink size: ")));
+						"NOTE: drink sizes are case sensitive!", "Enter drink size: ")));
 				if (!sizeSet) {
 					System.out.printf("%nPlease enter a valid size!%nSizes are CASE SENSITIVE!%n");
 				}

@@ -113,8 +113,8 @@ public class DrinkMachine {
 		String report = String.format(
 				"Drink sizes:%n%s is %.1f (mL)%n%s is %.1f (mL)%n%s is %.1f (mL)",
 				DrinkMachine.SMALL, DrinkMachine.SMALL_VOLUME,
-				DrinkMachine.MEDIUM, DrinkMachine.SMALL_VOLUME,
-				DrinkMachine.LARGE, DrinkMachine.SMALL_VOLUME
+				DrinkMachine.MEDIUM, DrinkMachine.MEDIUM_VOLUME,
+				DrinkMachine.LARGE, DrinkMachine.LARGE_VOLUME
 				);
 		return report;
 	}
