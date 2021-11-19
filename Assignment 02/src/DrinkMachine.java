@@ -99,8 +99,8 @@ public class DrinkMachine {
 			outOfBoundsString = "Outside tolerance of %.1f %s";
 		}
 		
-		report = String.format("%nSize: %s%nVolume: %.1f%nDifference: %.1f%n%s", size, volume, difference, 
-				String.format(outOfBoundsString, EPSILON, "ml !"));
+		report = String.format("%nSize: %s%nVolume: %.1f mL%nDifference: %.1f mL%n%s", size, volume, difference, 
+				String.format(outOfBoundsString, EPSILON, "mL !"));
 		
 		return report;
 	}
@@ -111,7 +111,7 @@ public class DrinkMachine {
 	 */
 	public String drinkSizeMenu() {
 		String report = String.format(
-				"Drink sizes:%n%s is %.1f (ml)%n%s is %.1f (ml)%n%s is %.1f (ml)",
+				"Drink sizes:%n%s is %.1f (mL)%n%s is %.1f (mL)%n%s is %.1f (mL)",
 				DrinkMachine.SMALL, DrinkMachine.SMALL_VOLUME,
 				DrinkMachine.MEDIUM, DrinkMachine.SMALL_VOLUME,
 				DrinkMachine.LARGE, DrinkMachine.SMALL_VOLUME
