@@ -38,7 +38,7 @@ public class Assignment02 {
 			
 			System.out.printf("%s%n%s%n",machine.verifySize(),"Program by Joshua Clarke");
 			
-		} while (user.inputString(String.format("%nWould you like to verify another drink?%n%s", 
-				"Type Yes to continue: ")).toLowerCase().equals("yes"));
+		} while (user.inputString(String.format("%nWould you like to verify another %s",
+				"drink? (Yes/No): ")).toLowerCase().equals("yes"));
 	}
 }

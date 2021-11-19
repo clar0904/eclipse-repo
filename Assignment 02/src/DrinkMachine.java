@@ -82,21 +82,25 @@ public class DrinkMachine {
 	public String verifySize() {
 		String report = "";
 		
+		String outOfBoundsString = "Within tolerance of %.1f %s";
 		double difference = 0;
 		
 		if (size.equals(SMALL)) {
 			difference = Math.abs(volume-SMALL_VOLUME);
 		} else if (size.equals(MEDIUM)) {
-			Math.abs(volume-MEDIUM_VOLUME);
+			difference = Math.abs(volume-MEDIUM_VOLUME);
 		} else if (size.equals(LARGE)) {
-			Math.abs(volume-LARGE_VOLUME);
+			difference = Math.abs(volume-LARGE_VOLUME);
 		} else {
 			return "Invalid drink size!";
 		}
 
-		String outOfBounds = String.format(difference > EPSILON ? "Outside tolerance of %.1f %s" : 
-			"Within tolerance of %.1f %s",EPSILON,"ml !");
-		report = String.format("%nSize: %s%nVolume: %.1f%nDifference: %.1f%n%s", size, volume, difference, outOfBounds);
+		if (difference > EPSILON) {
+			outOfBoundsString = "Outside tolerance of %.1f %s";
+		}
+		
+		report = String.format("%nSize: %s%nVolume: %.1f%nDifference: %.1f%n%s", size, volume, difference, 
+				String.format(outOfBoundsString, EPSILON, "ml !"));
 		
 		return report;
 	}
