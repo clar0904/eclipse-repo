@@ -2,7 +2,7 @@
  * Author: Joshua Clarke
  * Professor: Teddy Yap
  * Created: Nov. 18, 2021
- * Modified: Nov. 18, 2021
+ * Modified: Nov. 19, 2021
  * Description: A program that calculates the cost of an admission ticket based on the age
  * 				of the customer.
  */

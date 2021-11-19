@@ -2,7 +2,7 @@
  * Author: Joshua Clarke
  * Professor: Teddy Yap
  * Created: Nov. 18, 2021
- * Modified: Nov. 18, 2021
+ * Modified: Nov. 19, 2021
  * Description: A class that defines a drink machine. Use this class to determine
  * 				whether or not the drink machine is pouring drinks properly.
  */
