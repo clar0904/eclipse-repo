@@ -44,7 +44,7 @@ public class DrinkMachine {
 
 	/*
 	 * Checks if volume parameter specified is valid.
-	 * If so, sets and returns current drink volume.
+	 * If so, sets and returns true, otherwise it returns false.
 	 */
 	public boolean setVolume(double volume) {
 		if (volume > 0) {
@@ -63,7 +63,7 @@ public class DrinkMachine {
 
 	/*
 	 * Checks if size parameter specified is valid.
-	 * If so, sets and returns current drink size.
+	 * If so, sets and returns true, otherwise returns false.
 	 */
 	public boolean setSize(String size) {
 		size = size.toLowerCase();

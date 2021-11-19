@@ -15,29 +15,28 @@ public class Assignment02 {
 	public static void main(String[] args) {
 		DrinkMachine machine = new DrinkMachine();
 		User user = new User();
-		boolean sizeSet;
-		boolean volumeSet;
+		boolean sizeSet = false;
+		boolean volumeSet = false;
 		
 		do {
-			sizeSet = false;
-			volumeSet = false;
-			
 			while (!sizeSet) {
-				sizeSet = machine.setSize(user.inputString(String.format("%n%s%n%n%s", machine.drinkSizeMenu(), "Enter drink size: ")));
+				sizeSet = machine.setSize(user.inputString(String.format("%n%s%n%s%n%n%s", machine.drinkSizeMenu(), 
+						"NOTE: drink sizes are", "Enter drink size: ")));
 				if (!sizeSet) {
-					System.out.println("Invalid size! Please enter a valid size.");
+					System.out.printf("%nPlease enter a valid size!%nSizes are CASE SENSITIVE!%n");
 				}
 			}
+			sizeSet = false;
 			
 			while (!volumeSet) {
-				volumeSet = machine.setVolume(user.inputDouble("Enter drink volume: "));
+				volumeSet = machine.setVolume(user.inputDouble("Enter drink volume: "));	
 				if (!volumeSet) {
-					System.out.println("Invalid volume! Please enter a valid volume.");
+					System.out.println("Please enter a valid volume!");
 				}
 			}
+			volumeSet = false;
 			
 			System.out.printf("%s%n%s%n",machine.verifySize(),"Program by Joshua Clarke");
-			
 		} while (user.inputString(String.format("%nWould you like to verify another %s",
 				"drink? (Yes/No): ")).toLowerCase().equals("yes"));
 	}
