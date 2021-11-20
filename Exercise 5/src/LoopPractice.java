@@ -23,9 +23,9 @@ public class LoopPractice {
 		while (shouldContinue.equals("yes")) {
 			numberCounter++;
 			sum += user.inputInteger("Enter a number: ");
-			average = sum/numberCounter;
 			shouldContinue = user.inputString("Continue? (Yes/No): ").toLowerCase();
 		}
+		average = sum/numberCounter;
 		System.out.printf("Sum: %.4f%nAvg.: %.4f%n%s%n", sum, average, "Program by Joshua Clarke");
 	}
 	
@@ -42,9 +42,9 @@ public class LoopPractice {
 		do {
 			numberCounter++;
 			sum += user.inputInteger("Enter a number: ");
-			average = sum/numberCounter;
 			shouldContinue = user.inputString("Continue? (Yes/No): ").toLowerCase();
 		} while (shouldContinue.equals("yes"));
+		average = sum/numberCounter;
 		System.out.printf("Sum: %.4f%nAvg.: %.4f%n%s%n", sum, average, "Program by Joshua Clarke");
 	}
 	
