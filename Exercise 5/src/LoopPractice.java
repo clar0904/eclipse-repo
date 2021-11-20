@@ -20,6 +20,11 @@ public class LoopPractice {
 		int numberCounter = 0;
 		String shouldContinue = "yes";
 		System.out.printf("%s%n", "Indeterminate while loop demo");
+		
+		numberCounter++;
+		sum += user.inputDouble("Enter a number: ");
+		shouldContinue = user.inputString("Continue? (Yes/No): ").toLowerCase();
+		
 		while (shouldContinue.equals("yes")) {
 			numberCounter++;
 			sum += user.inputDouble("Enter a number: ");
