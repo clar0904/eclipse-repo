@@ -22,7 +22,7 @@ public class LoopPractice {
 		System.out.printf("%s%n", "Indeterminate while loop demo");
 		while (shouldContinue.equals("yes")) {
 			numberCounter++;
-			sum += user.inputInteger("Enter a number: ");
+			sum += user.inputDouble("Enter a number: ");
 			shouldContinue = user.inputString("Continue? (Yes/No): ").toLowerCase();
 		}
 		average = sum/numberCounter;
@@ -41,7 +41,7 @@ public class LoopPractice {
 		System.out.printf("%s%n", "Indeterminate do-while loop demo");
 		do {
 			numberCounter++;
-			sum += user.inputInteger("Enter a number: ");
+			sum += user.inputDouble("Enter a number: ");
 			shouldContinue = user.inputString("Continue? (Yes/No): ").toLowerCase();
 		} while (shouldContinue.equals("yes"));
 		average = sum/numberCounter;
