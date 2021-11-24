@@ -16,10 +16,11 @@ public class SimpleCipher {
      */
 	public String encode(String text) {
 		String result = "";
-		char[] chars = new char[text.length()];
+		int textLen = text.length();
+		char[] chars = new char[textLen];
 		
-		for (int index = 0; index < text.length(); index++) {
-			chars[index] = (char)(((int)text.charAt(index))+2);
+		for (int index = 0; index < textLen; index++) {
+			chars[index] = (char)(((int)chars[index])+2);
 		}
 		
 		chars = reverse(chars);
@@ -37,9 +38,11 @@ public class SimpleCipher {
      */
 	public String decode(String text) {
 		String result = "";
-		char[] chars = new char[text.length()];
-		for (int index = 0; index < text.length(); index++) {
-			chars[index] = (char)(((int)text.charAt(index))-2);
+		int textLen = text.length();
+		char[] chars = new char[textLen];
+		
+		for (int index = 0; index < textLen; index++) {
+			chars[index] = (char)(((int)chars[index])-2);
 		}
 		
 		chars = reverse(chars);
@@ -47,6 +50,7 @@ public class SimpleCipher {
 		for (int index = 0; index < text.length(); index++) {
 			result += chars[index];
 		}
+		
 		return result;
 	}
 	
